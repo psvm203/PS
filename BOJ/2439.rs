@@ -2,7 +2,6 @@ use std::io::*;
 
 fn main() {
     let input = read_to_string(stdin()).unwrap();
-
     let n: usize = input.trim().parse().unwrap();
 
     let create_line = |x| {

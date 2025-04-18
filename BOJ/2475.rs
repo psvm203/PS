@@ -5,9 +5,9 @@ fn main() {
 
     let numbers = input
         .split_ascii_whitespace()
-        .flat_map(|x| x.parse::<i32>());
+        .flat_map(|x| x.parse::<usize>());
 
-    let checksum = numbers.map(|x| x * x).sum::<i32>() % 10;
+    let checksum = numbers.map(|x| x * x).sum::<usize>() % 10;
 
     print!("{checksum}");
 }

@@ -2,11 +2,8 @@ use std::io::*;
 
 fn main() {
     let input = read_to_string(stdin()).unwrap();
-
-    let product: i32 = input.lines().flat_map(|x| x.parse::<i32>()).product();
-
+    let product: usize = input.lines().flat_map(|x| x.parse::<usize>()).product();
     let product_string = product.to_string();
-
     let digits = product_string.chars().flat_map(|x| x.to_digit(10));
 
     let mut counts = [0; 10];

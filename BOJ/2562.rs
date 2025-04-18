@@ -2,8 +2,7 @@ use std::io::*;
 
 fn main() {
     let input = read_to_string(stdin()).unwrap();
-
-    let numbers = input.lines().flat_map(|x| x.parse::<i32>());
+    let numbers = input.lines().flat_map(|x| x.parse::<usize>());
 
     let (index, max_number) = numbers
         .enumerate()
