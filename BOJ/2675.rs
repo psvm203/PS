@@ -1,22 +1,18 @@
 use std::io::*;
 
-use std::iter::repeat;
-
 fn main() {
     let input = read_to_string(stdin()).unwrap();
-
     let lines = input.lines();
 
     let create_line = |x: &str| {
         let mut split = x.split_ascii_whitespace();
-
         let repeat_count: usize = split.next().unwrap().parse().unwrap();
 
         let line: String = split
             .next()
             .unwrap()
             .chars()
-            .flat_map(|ch| repeat(ch).take(repeat_count))
+            .map(|ch| ch.to_string().repeat(repeat_count))
             .collect();
 
         line
@@ -28,5 +24,5 @@ fn main() {
         .collect::<Vec<String>>()
         .join("\n");
 
-    print!("{}", answer);
+    print!("{answer}");
 }
