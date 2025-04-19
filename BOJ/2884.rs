@@ -8,8 +8,7 @@ fn main() {
         .flat_map(|x| x.parse())
         .collect();
 
-    let hour = numbers[0];
-    let minute = numbers[1];
+    let (hour, minute) = (numbers[0], numbers[1]);
 
     let minute = (hour + 24) * 60 + minute - 45;
 

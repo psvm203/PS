@@ -6,8 +6,8 @@ fn main() {
 
     let create_line = |x| {
         let product = n * x;
-        let format = format!("{n} * {x} = {product}");
 
+        let format = format!("{n} * {x} = {product}");
         format
     };
 
