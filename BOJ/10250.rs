@@ -21,7 +21,7 @@ fn main() {
         .lines()
         .skip(1)
         .map(|line| calculate_room(line).to_string())
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 
     print!("{rooms}");

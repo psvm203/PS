@@ -6,7 +6,7 @@ fn main() {
 
     let answer = (1..=n)
         .map(|x| x.to_string())
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 
     print!("{answer}");

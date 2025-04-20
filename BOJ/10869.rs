@@ -1,4 +1,3 @@
-use std::cmp::Ordering::*;
 use std::io::*;
 
 fn main() {
@@ -11,11 +10,11 @@ fn main() {
 
     let (a, b) = (numbers[0], numbers[1]);
 
-    let cmp = match a.cmp(&b) {
-        Greater => ">",
-        Less => "<",
-        Equal => "==",
-    };
+    let answer = [a + b, a - b, a * b, a / b, a % b]
+        .iter()
+        .map(|x| x.to_string())
+        .collect::<Vec<_>>()
+        .join("\n");
 
-    print!("{cmp}");
+    print!("{answer}");
 }

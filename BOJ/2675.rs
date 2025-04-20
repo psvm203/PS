@@ -21,7 +21,7 @@ fn main() {
     let answer = lines
         .skip(1)
         .map(|x| format!("{}", create_line(x)))
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 
     print!("{answer}");

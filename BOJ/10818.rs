@@ -10,5 +10,6 @@ fn main() {
 
     let min: i32 = numbers.clone().min().unwrap();
     let max: i32 = numbers.max().unwrap();
+
     print!("{min} {max}");
 }

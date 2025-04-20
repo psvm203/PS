@@ -5,14 +5,14 @@ fn main() {
     let n: usize = input.trim().parse().unwrap();
 
     let create_line = |x| {
-        let spaces = " ".repeat(n - x);
         let stars = "*".repeat(x);
-        spaces + &stars
+        let line = format!("{:>n$}", stars);
+        line
     };
 
     let answer = (1..=n)
         .map(|x| create_line(x))
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 
     print!("{answer}");

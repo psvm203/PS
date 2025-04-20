@@ -13,7 +13,7 @@ fn main() {
 
     let answer = (1..10)
         .map(|x| create_line(x))
-        .collect::<Vec<String>>()
+        .collect::<Vec<_>>()
         .join("\n");
 
     print!("{answer}");
