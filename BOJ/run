@@ -1,3 +1,2 @@
 problem=$1
-rustc -o ./target/$problem ./$problem.rs
-./target/$problem < stdin.txt
+rustc -o ./target/$problem ./$problem.rs && ./target/$problem < stdin.txt
