@@ -6,13 +6,13 @@ fn main() {
 
     let n: usize = lines.next().unwrap().parse().unwrap();
 
-    let mut read_ints = || {
+    let mut read_ints = || -> Vec<usize> {
         lines
             .next()
             .unwrap()
             .split_ascii_whitespace()
             .flat_map(|x| x.parse())
-            .collect::<Vec<usize>>()
+            .collect()
     };
 
     let sizes = read_ints();
