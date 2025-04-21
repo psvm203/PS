@@ -12,7 +12,7 @@ fn main() {
     is_prime[0] = false;
     is_prime[1] = false;
 
-    for i in 2..1001 {
+    for i in 2..32 {
         if is_prime[i] {
             for j in (i * i..1001).step_by(i) {
                 is_prime[j] = false;
