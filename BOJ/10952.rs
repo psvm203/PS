@@ -12,11 +12,9 @@ fn main() {
         sum
     };
 
-    let lines = input.lines();
-
-    let sums = lines
-        .clone()
-        .take(lines.count() - 1)
+    let sums = input
+        .lines()
+        .take_while(|&line| line != "0 0")
         .map(|line| calculate_sum(line).to_string())
         .collect::<Vec<_>>()
         .join("\n");
