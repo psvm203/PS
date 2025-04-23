@@ -19,7 +19,7 @@ fn main() {
     let modulus = 1234567891;
 
     let hash_char =
-        |(i, ch)| mod_pow(base, modulus, i) % modulus * (ch as usize - 'a' as usize + 1) % modulus;
+        |(i, ch)| mod_pow(base, modulus, i) * (ch as usize - 'a' as usize + 1) % modulus;
 
     let hash: usize = text
         .chars()
