@@ -9,11 +9,11 @@ fn main() {
     let x: usize = read_split().nth(1).unwrap().parse().unwrap();
     let numbers = read_split().flat_map(|number| number.parse::<usize>());
 
-    let answer = numbers
+    let output = numbers
         .filter(|&number| number < x)
         .map(|number| number.to_string())
         .collect::<Vec<_>>()
         .join(" ");
 
-    print!("{answer}");
+    print!("{output}");
 }

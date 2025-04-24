@@ -16,7 +16,7 @@ fn main() {
         counts[digit] += 1;
     }
 
-    let answer = counts.map(|x| x.to_string()).join("\n");
+    let output = counts.map(|x| x.to_string()).join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }

@@ -8,7 +8,7 @@ fn main() {
         .flat_map(|x| x.parse())
         .collect();
 
-    let answer = numbers[0] / numbers[1];
+    let output = numbers[0] / numbers[1];
 
-    print!("{answer}");
+    print!("{output}");
 }

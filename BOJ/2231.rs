@@ -14,10 +14,10 @@ fn main() {
         number + digits_sum
     };
 
-    let answer = match (1..n).find(|&x| decompose(x) == n) {
+    let output = match (1..n).find(|&x| decompose(x) == n) {
         Some(creator) => creator,
         None => 0,
     };
 
-    print!("{answer}");
+    print!("{output}");
 }

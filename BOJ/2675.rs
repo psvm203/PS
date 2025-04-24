@@ -18,11 +18,11 @@ fn main() {
         line
     };
 
-    let answer = lines
+    let output = lines
         .skip(1)
         .map(|x| format!("{}", create_line(x)))
         .collect::<Vec<_>>()
         .join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }

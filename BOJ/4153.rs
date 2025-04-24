@@ -23,11 +23,11 @@ fn main() {
         result
     };
 
-    let answer = lines
+    let output = lines
         .take_while(|&line| line != "0 0 0")
         .map(|line| check_right(line))
         .collect::<Vec<_>>()
         .join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }

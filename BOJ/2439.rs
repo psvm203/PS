@@ -10,10 +10,10 @@ fn main() {
         line
     };
 
-    let answer = (1..=n)
+    let output = (1..=n)
         .map(|x| create_line(x))
         .collect::<Vec<_>>()
         .join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }

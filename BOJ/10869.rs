@@ -10,11 +10,11 @@ fn main() {
 
     let (a, b) = (numbers[0], numbers[1]);
 
-    let answer = [a + b, a - b, a * b, a / b, a % b]
+    let output = [a + b, a - b, a * b, a / b, a % b]
         .iter()
         .map(|x| x.to_string())
         .collect::<Vec<_>>()
         .join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }

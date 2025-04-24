@@ -16,7 +16,7 @@ fn main() {
         }
     };
 
-    let answer = is_leap_year(year) as usize;
+    let output = is_leap_year(year) as usize;
 
-    print!("{answer}");
+    print!("{output}");
 }

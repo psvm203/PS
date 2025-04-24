@@ -12,10 +12,10 @@ fn main() {
         }
     };
 
-    let answer = texts
+    let output = texts
         .map(|line| check_palindrome(line))
         .collect::<Vec<_>>()
         .join("\n");
 
-    print!("{answer}");
+    print!("{output}");
 }
