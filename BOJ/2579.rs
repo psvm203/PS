@@ -1,12 +1,5 @@
 use std::io::*;
 
-// index, visited_prev?
-// [0,f] = 10
-// [1,f] = 20
-// [1,t] = 30
-// [2,f] = max ([0,f], [0, t])
-// [2,t] = [1,f]
-
 fn main() {
     let input = read_to_string(stdin()).unwrap();
 
