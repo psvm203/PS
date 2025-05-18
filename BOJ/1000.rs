@@ -5,7 +5,7 @@ fn main() {
 
     let sum: usize = input
         .split_ascii_whitespace()
-        .flat_map(|x| x.parse::<usize>())
+        .map(|x| x.parse::<usize>().unwrap())
         .sum();
 
     print!("{sum}");
