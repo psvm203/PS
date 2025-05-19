@@ -1,14 +1,14 @@
 use std::io::*;
 
 fn main() {
-    let input = read_to_string(stdin()).unwrap();
+    let stdin = read_to_string(stdin()).unwrap();
 
-    let numbers: Vec<i32> = input
+    let nums: Vec<usize> = input
         .split_ascii_whitespace()
-        .flat_map(|x| x.parse())
+        .map(|x| x.parse().unwrap())
         .collect();
 
-    let output = numbers[0] - numbers[1];
+    let output = nums[0] as i32 - nums[1] as i32;
 
     print!("{output}");
 }
