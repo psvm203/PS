@@ -1,3 +1,4 @@
+use std::collections::*;
 use std::convert::*;
 use std::io::*;
 
@@ -10,7 +11,7 @@ fn main() {
             .next()
             .unwrap()
             .split(' ')
-            .map(|x| x.parse().unwrap())
+            .flat_map(|x| x.parse())
             .collect()
     };
 
@@ -18,31 +19,44 @@ fn main() {
     let nums = read_ints();
     let queries_count = read_ints()[0];
 
-    let mut memo = vec![vec![false; n]; n];
+    let mut is_palindrome = vec![vec![false; n + 1]; n];
 
     for i in 0..n {
-        memo[i][i] = true;
-    }
+        let mut lo = i;
+        let mut hi = i + 1;
 
-    for i in 1..n {
-        if nums[i - 1] == nums[i] {
-            memo[i - 1][i] = true;
+        while nums.get(lo) == nums.get(hi - 1) {
+            is_palindrome[lo][hi] = true;
+
+            if lo == 0 {
+                break;
+            }
+
+            lo -= 1;
+            hi += 1;
         }
     }
 
-    for len in 3..=n {
-        for i in 0..=n - len {
-            let j = i + len - 1;
-            if nums[i] == nums[j] && memo[i + 1][j - 1] {
-                memo[i][j] = true;
+    for i in 1..n {
+        let mut lo = i - 1;
+        let mut hi = i + 1;
+
+        while nums.get(lo) == nums.get(hi - 1) {
+            is_palindrome[lo][hi] = true;
+
+            if lo == 0 {
+                break;
             }
+
+            lo -= 1;
+            hi += 1;
         }
     }
 
     let output = (0..queries_count)
         .map(|_| {
             let [s, e] = read_ints().try_into().unwrap();
-            (memo[s - 1][e - 1] as usize).to_string()
+            (is_palindrome[s - 1][e] as usize).to_string()
         })
         .collect::<Vec<_>>()
         .join("\n");
