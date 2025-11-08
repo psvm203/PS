@@ -1,0 +1,2 @@
+problem=$1
+g++ -o ./target/$problem ./$problem.cpp && ./target/$problem < stdin.txt
