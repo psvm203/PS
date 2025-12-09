@@ -17,6 +17,7 @@ int solution(int N, int number) {
         if (x == number) {
             return count;
         }
+        
         int cur_n = 0;
         int min_count = INF;
         for (int i = 1; i + count <= 8; i++) {
@@ -35,7 +36,5 @@ int solution(int N, int number) {
     
     int answer = dfs(0, 0);
     answer = answer == INF ? -1 : answer;
-    
-    
     return answer;
 }
