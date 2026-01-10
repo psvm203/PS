@@ -3,4 +3,4 @@ stdin.txt
 rustc-*.txt
 .idea
 CMakeLists.txt
-input.txt
+stdin.txt
