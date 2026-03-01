@@ -4,3 +4,4 @@ rustc-*.txt
 .idea
 CMakeLists.txt
 Main*
+time.txt

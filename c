@@ -1,5 +1,9 @@
 dir=$(ls -dt */ | head -n 1)
 file=$(ls -t $dir | grep '\.cpp' | head -n 1)
-g++ $dir$file -o Main -O2 -lm -static -std=gnu++17
+g++ $dir$file -o Main -std=gnu++17
 program=$(ls Main* | head -n 1)
-./$program < stdin.txt
+chmod +x $program
+TIMEFORMAT=%Ss
+{ time ./$program < stdin.txt; } 2> time.txt
+echo
+cat time.txt | tr -d '\n'
