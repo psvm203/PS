@@ -6,4 +6,4 @@ chmod +x $program
 TIMEFORMAT=%Ss
 { time ./$program < stdin.txt; } 2> time.txt
 echo
-cat time.txt | tr -d '\n'
+cat time.txt

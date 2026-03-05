@@ -5,3 +5,4 @@ rustc-*.txt
 CMakeLists.txt
 Main*
 time.txt
+gitui
